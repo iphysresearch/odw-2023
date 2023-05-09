@@ -59,7 +59,7 @@ for fname in files:
                     msg = f"Failed: {fname} needs {module}: {version}, but it is not in the environment.yml file"
                     errors.append(msg)
 
-if len(errors) > 0:
+if errors:
     errors = "\n".join(errors)
     msg = f"\nVersion issues: {errors}"
     print(msg)
